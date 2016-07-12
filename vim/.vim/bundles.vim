@@ -59,7 +59,7 @@ Bundle 'majutsushi/tagbar'
 "Bundle 'humiaozuzu/TabBar'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
-BUndle 'sukima/xmledit'
+Bundle 'sukima/xmledit'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
@@ -69,7 +69,7 @@ Bundle 'VOom'
 Bundle 'VimIM'
 Bundle 'EasyGrep'
 Bundle 'vim-airline/vim-airline'
-BUndle 'vim-airline/vim-airline-themes'
+Bundle 'vim-airline/vim-airline-themes'
 
 "-------------
 " Other Utils
