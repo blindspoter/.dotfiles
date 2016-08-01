@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'         " required!
+Bundle 'gmarik/vundle'
 
 
 ""------------------
@@ -37,7 +37,6 @@ Bundle 'Lokaltog/vim-easymotion'
 " Fast editing
 "--------------
 Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdcommenter'
 Bundle 'sjl/gundo.vim'
 Bundle 'jiangmiao/auto-pairs'
 "Bundle 'Raimondi/delimitMate'
