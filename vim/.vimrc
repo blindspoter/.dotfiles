@@ -3,12 +3,12 @@ source ~/.vim/bundles.vim
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1 " encoding dectection"
 set nocompatible
 set backspace=indent,eol,start
-set history=50		" keep 50 lines of command line history
-set ruler		    " show the cursor position all the time
-set showcmd		    " display incomplete commands
-set cursorline      " highlight current line"
-set incsearch		" do incremental searching
-set ignorecase      " set highlight,conflict with highlight current line
+set history=50             " keep 50 lines of command line history
+set ruler                  " show the cursor position all the time
+set showcmd                " display incomplete commands
+set cursorline             " highlight current line"
+set incsearch              " do incremental searching
+set ignorecase             " set highlight,conflict with highlight current line
 set smartcase
 
 " ==========================================
@@ -37,29 +37,30 @@ colorscheme desert         " 经典配色方案。
 "             Display settings
 "==========================================
 set t_Co=256
-set mouse=a                                                       " use mouse in all modes
-set report=0                                                      " always report number of lines changed                "
-set nowrap                                                        " dont wrap lines
-set scrolloff=2                                                   " 2 lines above/below cursor when scrolling
-set number                                                        " show line numbers
-set showmatch                                                     " show matching bracket (briefly jump)
-set showcmd                                                       " show typed command in status bar
-set title                                                         " show file in titlebar
-set laststatus=2                                                  " use 2 lines for the status bar
-set matchtime=2                                                   " show matching bracket for 0.2 seconds
-set matchpairs+=<:>                                               " specially for html
+set mouse=a                 " use mouse in all modes
+set report=0                " always report number of lines changed
+set nowrap                  " dont wrap lines
+set scrolloff=2             " 2 lines above/below cursor when scrolling
+set number                  " show line numbers
+set showmatch               " show matching bracket (briefly jump)
+set showcmd                 " show typed command in status bar
+set title                   " show file in titlebar
+set laststatus=2            " use 2 lines for the status bar
+set matchtime=2             " show matching bracket for 0.2 seconds
+set matchpairs+=<:>         " specially for html
 "set relativenumber
-set ruler                                                         " show cursor position in status bar
-set showmode                                                      " show mode in status bar (insert/replace/...)
+set ruler                   " show cursor position in status bar
+set showmode                " show mode in status bar (insert/replace/...)
 
 " Default Indentation
 set autoindent
-set smartindent     " indent when
-set tabstop=4       " tab width
-set softtabstop=4   " backspace &
-set shiftwidth=4    " indent width
+set smartindent             " indent when
+set tabstop=4               " tab width
+set softtabstop=4           " backspace &
+set shiftwidth=4            " indent width
 set textwidth=79
-set expandtab       " expand tab to space
+set expandtab               " expand tab to space
+
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=0
 autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
 autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
