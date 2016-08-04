@@ -6,18 +6,19 @@ source ~/.vim/bundles.vim
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1 " encoding dectection"
 set nocompatible           " 不要兼容vi
 set history=50             " keep 50 lines of command line history
-set noswapfile
+set noswapfile             " 禁止生成临时文件
+set nobackup
 set showcmd                " display incomplete commands
 set incsearch              " do incremental searching
-set hlsearch
-set ignorecase             " 设置大小写敏感和聪明感知(小写全搜，大写完全匹配)
-set smartcase
+set hlsearch               " 搜索逐字符高亮
+set ignorecase             " 搜索忽略大小写
+set smartcase              " 设置大小写敏感和聪明感知(小写全搜，大写完全匹配)
 
 filetype on                " 检测文件类型
 filetype indent on         " 针对不同的文件类型采用不同的缩进格式
 filetype plugin on         " 允许插件
 filetype plugin indent on  " 启动自动补全
-set showmatch              " 括号配对情况
+
 set mat=2                  " How many tenths of a second to blink when matching brackets
 syntax enable              " 开启语法高亮
 syntax on
@@ -40,15 +41,15 @@ set t_Co=256                 " 设置256色显示
 set mouse=a                  " use mouse in all modes
 set cursorline               " highlight current line"
 set cursorcolumn             " 光标垂直高亮
-set ruler                    " show the cursor position all the time
+set ruler                    " 打开状态栏标尺
 set report=0                 " always report number of lines changed
 set nowrap                   " dont wrap lines
 set scrolloff=2              " 2 lines above/below cursor when scrolling
 set number                   " show line numbers
-set showmatch                " show matching bracket (briefly jump)
 set showcmd                  " show typed command in status bar
 set title                    " show file in titlebar
 set laststatus=2             " use 2 lines for the status bar
+set showmatch                " 高亮显示匹配的括号
 set matchtime=2              " show matching bracket for 0.2 seconds
 set matchpairs+=<:>          " specially for html
 "set relativenumber
@@ -57,7 +58,6 @@ set showmode                 " show mode in status bar (insert/replace/...)
 set guifont=Inconsolata:h12  " GUI界面里的字体，默认有抗锯齿
 set isk+=-                   " 将-连接符也设置为单词
 set backspace=indent,eol,start
-
 
 " Default Indentation
 set autoindent
@@ -71,9 +71,30 @@ set softtabstop=4           " backspace &
 set shiftwidth=4            " indent width
 set expandtab               " expand tab to space
 
+"==========================================
+"            Filetypes settings
+"==========================================
+let python_highlight_all = 1
+
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=0
 autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
 autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=79
+
+au FileType python syn keyword pythonDecorator True None False self
+
+au BufNewFile,BufRead *.jinja set syntax=htmljinja
+au BufNewFile,BufRead *.mako set ft=mako
+
+au FileType python map <buffer> F :set foldmethod=indent<cr>
+
+au FileType python inoremap <buffer> $r return
+au FileType python inoremap <buffer> $i import
+au FileType python inoremap <buffer> $p print
+au FileType python inoremap <buffer> $f #--- <esc>a
+au FileType python map <buffer> <leader>1 /class
+au FileType python map <buffer> <leader>2 /def
+au FileType python map <buffer> <leader>C ?class
+au FileType python map <buffer> <leader>D ?def
 
 "==========================================
 "              Plugin config
@@ -136,8 +157,23 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_disabled_filetypes=['html']
+let g:syntastic_python_checkers = ['flake8']                 " Python
+let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']   " go
+
+
+" Vim-go
+let g:go_fmt_command = "goimports"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+" Git gutter
+let g:gitgutter_enabled=0
+nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
 
 "==========================================

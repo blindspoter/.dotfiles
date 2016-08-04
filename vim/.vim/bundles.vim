@@ -11,7 +11,6 @@ Bundle 'gmarik/vundle'
 ""------------------
 "" Dash intergartion
 "" -----------------
-"
 "Bundle 'rizzatti/funcoo.vim'
 "Bundle 'rizzatti/dash.vim'
 
@@ -21,7 +20,6 @@ Bundle 'gmarik/vundle'
 Bundle 'Shougo/neocomplcache'
 Bundle 'garbas/vim-snipmate'
 Bundle 'ervandew/supertab'
-" Bundle 'honza/snipmate-snippets'
 Bundle 'mattn/emmet-vim'
 " snipmate dependencies
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -30,7 +28,6 @@ Bundle 'tomtom/tlib_vim'
 "-----------------
 " Fast navigation
 "-----------------
-" Bundle 'tsaleh/vim-matchit'
 Bundle 'Lokaltog/vim-easymotion'
 
 "--------------
@@ -39,7 +36,6 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-surround'
 Bundle 'sjl/gundo.vim'
 Bundle 'jiangmiao/auto-pairs'
-"Bundle 'Raimondi/delimitMate'
 Bundle 'kana/vim-smartinput'
 Bundle 'godlygeek/tabular'
 Bundle 'nathanaelkane/vim-indent-guides'
@@ -73,7 +69,6 @@ Bundle 'vim-airline/vim-airline-themes'
 "-------------
 " Other Utils
 " ------------
-"Bundle 'humiaozuzu/fcitx-status'
 Bundle 'nvie/vim-togglemouse'
 
 "----------------------------------------
@@ -90,15 +85,21 @@ Bundle 'tpope/vim-haml'
 Bundle 'nono/jquery.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
-"Bundle 'groenewege/vim-less'
-"Bundle 'wavded/vim-stylus'
 Bundle 'xml.vim'
 Bundle 'css_color.vim'
 Bundle 'tpope/vim-markdown'
 
 " Scheme
 Bundle 'kien/rainbow_parentheses.vim'
-"Bundle 'wlangstroth/vim-racket'
+
+" Python
+Bundle 'sophacles/vim-bundle-mako'
+Bundle 'klen/python-mode'
+Bundle 'python.vim--vasiliev'
+Bundle 'mako.vim'
+
+" go
+Bundle 'fatih/vim-go'
 
 "--------------
 " Color Scheme
@@ -111,13 +112,5 @@ Bundle 'Lokaltog/vim-distinguished'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'gosukiwi/vim-atom-dark'
 Bundle 'chriskempson/base16-vim'
-
-"--------------
-" Python Plugin
-" -------------
-Bundle 'sophacles/vim-bundle-mako'
-Bundle 'klen/python-mode'
-Bundle 'python.vim--vasiliev'
-Bundle 'mako.vim'
 
 filetype plugin indent on     " required!
