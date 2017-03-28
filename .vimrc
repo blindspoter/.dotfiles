@@ -117,6 +117,7 @@ let NERDTreeWinPos = "left"
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeGlyphReadOnly = "RO"
 
 " SuperTab
 let g:SuperTabDefultCompletionType='context'
